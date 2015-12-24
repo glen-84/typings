@@ -23,7 +23,6 @@ export interface ConfigJson {
   // Typing information.
   main?: string
   browser?: Browser
-  ambient?: boolean
   typings?: string
   browserTypings?: string | Browser
 
@@ -68,10 +67,9 @@ export interface DependencyTree {
   typings?: string
   browserTypings?: Browser
   parent?: DependencyTree
-  type: string
   src: string
+  raw: string
   missing: boolean
-  ambient: boolean
   dependencies: DependencyBranch
   devDependencies: DependencyBranch
   ambientDependencies: DependencyBranch
